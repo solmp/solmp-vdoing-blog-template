@@ -36,4 +36,4 @@ git commit -m "${msg}"
 git push -f "$push_addr" HEAD:$push_branch # 推送到github gh-pages分支
 
 cd -
-rm -rf $dist_path
+#rm -rf $dist_path
