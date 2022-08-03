@@ -1,0 +1,64 @@
+name: CI
+
+
+#on: [push]
+
+# 在main分支发生push事件时触发。
+on:
+  push:
+    branches:
+      - main
+
+env: # 设置环境变量
+  TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
+
+  # 部署到服务器相关配置
+  NAME: solmp
+  SERVER_IP: 8.142.217.82 # 远程服务器IP
+  SERVER_SSH_USERNAME: root # 远程服务器ssh 用户名
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
+  SERVER_SITE_PATH: /home/www/solmp.github.io/ # 服务器保存路径，需要确认此目录已在服务端创建
+
+jobs:
+  build: # 自定义名称
+    runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 12.x ]
+
+    steps:
+      - name: Checkout # 步骤1
+        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
+        uses: actions/setup-node@v1 # 作用：安装nodejs
+        with:
+          node-version: ${{ matrix.node-version }} # 版本
+
+      # step3-1: 部署到Github Page
+      - name: run deploy
+        env: # 设置环境变量
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # token私密变量
+        run: npm install && npm run deploy
+
+#      # step3-2: 部署到服务器
+#      # 利用action把build好的文件上传到服务器 /home/www/solmp.github.io 路径下,需要确认此目录已在服务端创建
+#      - name: deploy file to server
+#        uses: ${{ env.NAME }}/SFTP-Deploy-Action@v1.0
+#        with:
+#          username: ${{ env.SERVER_SSH_USERNAME }}   #ssh user name
+#          port: '22' # 远程服务器ssh端口，默认22
+#          server: ${{ env.SERVER_IP }} # 远程服务器IP
+#          ssh_private_key: ${{ env.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
+#          local_path: 'docs/.vuepress/dist/*'  # 对应我们项目打包后的静态文件路径
+#          remote_path: ${{ env.SERVER_SITE_PATH }} # 服务器上的路径
+#
+#      # other-step-A: 仅发布网站到github page（不推送源文件分支）
+#      - name: Build and Deploy
+#        uses: JamesIves/github-pages-deploy-action@4.1.4
+#        env: # 设置环境变量
+#          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }} # toKen私密变量
+#        with:
+#          branch: gh-pages # 部署到的分支
+#          folder: docs/.vuepress/dist # 要部署的文件夹.
+#          BUILD_SCRIPT: npm install && npm run build && cd docs/.vuepress/dist && echo 'solmp.vercel.app' > CNAME && cd - # 部署前要执行的命令（记得cd进入某个目录后，后面要cd -退回开始的目录）
