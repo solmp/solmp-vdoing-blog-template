@@ -43,7 +43,7 @@ jobs:
       # step3-A-2: 部署到服务器
       # 利用action把build好的文件上传到服务器 /home/www/solmp.github.io 路径下,需要确认此目录已在服务端创建
       - name: deploy to server
-        uses: solmp/SFTP-Deploy-Action@v1.0
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
           username: ${{ env.SERVER_SSH_USERNAME }}   #ssh user name
           port: '22' # 远程服务器ssh端口，默认22
