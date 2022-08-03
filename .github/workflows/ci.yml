@@ -58,7 +58,7 @@ jobs:
       # 1. build
       - name: Install and Build 🔧 # https://github.com/JamesIves/github-pages-deploy-action
         run: |
-          npm ci
+          npm install
           npm run build
           cd docs/.vuepress/dist
           echo "solmp.vercel.app" > CNAME
