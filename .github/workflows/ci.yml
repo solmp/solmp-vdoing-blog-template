@@ -54,12 +54,19 @@ jobs:
 #          remote_path: ${{ env.SERVER_SITE_PATH }} # 服务器上的路径
 #
 
-      # step3-B-1: 仅部署到github page（不推送到其它平台）
+      # step3-B：仅部署到github page（不推送到其它平台）
+      # 1. build
+      - name: Install and Build 🔧 # https://github.com/JamesIves/github-pages-deploy-action
+        run: |
+          npm ci
+          npm run build
+          cd docs/.vuepress/dist
+          echo "solmp.vercel.app" > CNAME
+          cd -
+      # 2. deploy
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
-        env: # 设置环境变量
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }} # toKen私密变量
         with:
           branch: gh-pages # 部署到的分支
-          folder: docs/.vuepress/dist # 要部署的文件夹.
-          BUILD_SCRIPT: npm install && npm run build && cd docs/.vuepress/dist && echo 'solmp.vercel.app' > CNAME && cd - # 部署前要执行的命令（记得cd进入某个目录后，后面要cd -退回开始的目录）
+          folder: "docs/.vuepress/dist" # 要部署的文件夹
+
