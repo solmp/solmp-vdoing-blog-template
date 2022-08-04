@@ -8,7 +8,7 @@ module.exports = [
     ['meta', {name: 'referrer', content: 'no-referrer-when-downgrade'}],
     ['link', {rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_3114978_qe0b39no76.css'}], // 阿里云在线矢量库,字数和访客数图标使用
     // 搜索框添加快捷键
-    ["script", {"language": "javascript", "type": "text/javascript", "src": "/js/pgmanor-self.js"}]
+    ["script", {"language": "javascript", "type": "text/javascript", "src": "/js/pgmanor-self.js"}],
 
     // [
     //   'script',
