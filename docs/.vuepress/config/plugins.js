@@ -30,6 +30,16 @@ module.exports = [
         }
     ],
 
+    // 网页头动态变化
+    [
+        'vuepress-plugin-dynamic-title',
+        {
+            hideIcon: 'img/favicon.svg',
+            hideText: '👀看不到我👀',
+            recoverTime: 2000,
+        },
+    ],
+
     // rss 配置
     ['feed', feed_options],
 
