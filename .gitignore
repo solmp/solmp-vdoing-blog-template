@@ -20,6 +20,4 @@ urls.txt
 # mac
 .DS_Store
 
-# Test
-docs/.vuepress/config/module-test.js
 
