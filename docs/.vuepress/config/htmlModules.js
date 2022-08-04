@@ -1,35 +1,29 @@
 // 官方文档：https://doc.xugaoyi.com/pages/a20ce8/#%E8%87%AA%E5%AE%9A%E4%B9%89html%E6%A8%A1%E5%9D%97
+/** 插入自定义html模块 (可用于插入广告模块等)
+ * {
+ *   homeSidebarB: htmlString, 首页侧边栏底部
+ *
+ *   sidebarT: htmlString, 全局左侧边栏顶部
+ *   sidebarB: htmlString, 全局左侧边栏底部
+ *
+ *   pageT: htmlString, 全局页面顶部
+ *   pageB: htmlString, 全局页面底部
+ *   pageTshowMode: string, 页面顶部-显示方式：未配置默认全局；'article' => 仅文章页①； 'custom' => 仅自定义页①
+ *   pageBshowMode: string, 页面底部-显示方式：未配置默认全局；'article' => 仅文章页①； 'custom' => 仅自定义页①
+ *
+ *   windowLB: htmlString, 全局窗口左下角②
+ *   windowRB: htmlString, 全局窗口右下角②
+ * }
+ *
+ * ①注：在.md文件front matter配置`article: false`的页面是自定义页，未配置的默认是文章页（首页除外）。
+ * ②注：windowLB 和 windowRB：1.展示区块宽高最大是200*200px。2.请给自定义元素定一个不超过200px的固定宽高。3.在屏宽小于960px时无论如何都不会显示。
+ */
+
 module.exports = {
-    // homeSidebarB:
-    //   `<div style="padding: 0.95rem">
-    //     <p style="
-    //       color: var(--textColor);
-    //       opacity: 0.9;
-    //       font-size: 20px;
-    //       font-weight: bold;
-    //       margin: 0 0 8px 0;
-    //     ">公众号</p>
-    //     <img src="http://t.eryajf.net/imgs/2022/02/be5b6c6fa601a9d1.png"  style="width:100%;" />
-    //     <p>
-    //     运维艺术，扫码或者搜索关注
-    //     </p>
-    //     </div>`,
-    // `<div style="padding: 0.95rem">
-    // <p style="
-    //   color: var(--textColor);
-    //   opacity: 0.9;
-    //   font-size: 20px;
-    //   font-weight: bold;
-    //   margin: 0 0 8px 0;
-    // ">本站工具</p>
-    // <p>
-    //   <a href="https://eryajf.github.io/Learning-Weekly/" arget="_blank" > 学习周刊 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
-    //   </br><a href="http://nav.eryajf.net" arget="_blank" > 我的导航 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
-    //   </br><a href="http://ip.eryajf.net" arget="_blank" > 出口IP查询 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
-    //   </br><a href="http://m.eryajf.net" arget="_blank" > 开源软件国内镜像 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
-    //   </br><a href="http://ob-plugin.eryajf.net" arget="_blank" > Ob插件周刊 <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
-    // </p>
-    // </div>`,
-    // 利用广告模块儿,添加访问地球🌎
-    // homeSidebarB: `<div style="width:100%;height:122px;color:#fff;background: #eee;"><a href="https://www.revolvermaps.com/livestats/5srkcv15atq/"><img src="//rf.revolvermaps.com/h/m/a/0/ff0000/128/10/5srkcv15atq.png" width="256" height="128" alt="Map" style="border:0;"></a></div>`,
+    // windowLB:
+    // `<img src="/img/LB-img.jpg" class="LB-img"
+    //       style="width: 130px;height: 130px;opacity: 0.8;
+    //       margin-bottom: -4px;padding-bottom:0;position: fixed;
+    //       bottom: 0;left: 0.5rem;z-index: 1;" alt="">`
 }
+

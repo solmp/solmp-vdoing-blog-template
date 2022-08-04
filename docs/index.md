@@ -30,9 +30,6 @@ features: # 可选的
 
 ---
 
-<!-- <img src="/img/LB-img.jpg" class="LB-img" style="width: 130px;height: 130px;opacity: 0.8;margin-bottom: -4px;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;"> -->
-
-
 <ClientOnly>
   <WebInfo/>
 </ClientOnly>

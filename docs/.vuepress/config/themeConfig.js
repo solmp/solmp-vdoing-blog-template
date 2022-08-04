@@ -1,21 +1,21 @@
-const nav = require('./themeConfig/nav.js');
+const nav = require('./nav.js');
 const htmlModules = require('./htmlModules.js');
-// const sidebar = require('./themeConfig/sidebar.js');
 const {readFileList, readTotalFileWords, readEachFileWords} = require('../webSiteInfo/readFile.js');
 
 // 主题配置
 module.exports = {
-    nav, // 顶部导航栏
-    sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: '/img/logo.png', // 导航栏logo
-    repo: 'solmp/solmp.github.io', // 导航栏右侧生成Github链接
-    searchMaxSuggestions: 10, // 搜索结果显示最大数
-    lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-    editLinks: false, // 关闭编辑按钮,此编辑无实际意义
-    // docsDir: 'docs', // 编辑的文件夹
+    nav: nav,                       // 顶部导航栏
+    sidebarDepth: 2,                // 侧边栏显示深度，默认1，最大2（显示到h3标题）
+    logo: '/img/logo.png',          // 导航栏logo
+    repo: 'solmp/solmp.github.io',  // 导航栏右侧生成Github链接
+    searchMaxSuggestions: 10,       // 搜索结果显示最大数
+    lastUpdated: '上次更新',          // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
+    editLinks: false,               // 关闭编辑按钮,此编辑无实际意义
+    // docsDir: 'docs',             // 编辑的文件夹
     // editLinkText: '编辑',
-    sidebarHoverTriggerOpen: true, // 侧边栏自动隐藏
-    searchPlaceholder: "按下 𝑺 搜索",  // 可选：搜索栏占位文本，默认："$ grep ..."
+    sidebarHoverTriggerOpen: true,  // 侧边栏自动隐藏
+    searchPlaceholder: "按下 𝑺 搜索", // 可选：搜索栏占位文本，默认："$ grep ..."
+
     //*** 以下配置是Vdoing主题改动和新增的配置 ***//
 
     // 当.md文件的front matter不存在extendFrontmatter内相应的字段时，将在运行开发服务dev或打包build时自动添加，但不会覆盖已有的数据。
@@ -103,12 +103,11 @@ module.exports = {
             },
         ],
     },
-    // 此处定义了访问地球功能,注释掉了,使用首页3D的展示方式
     htmlModules,
     footer: {
         // 页脚信息
         createYear: 2022, // 博客创建年份
         // copyrightInfo:
-        //     '| <a href="https://www.foreverblog.cn/" class="d-inline-block text-muted" target="_blank" rel="external nofollow"><img src="https://t.eryajf.net/imgs/2022/01/964560013b68c2e4.png" alt="点击查看十年之约" style="width:auto;height:11px;"> | <a rel="nofollow " target="_blank" href="https://beian.miit.gov.cn/">浙ICP备18057030号</a>', // 博客版权信息，支持a标签
+        //     '| <a href="https://www.foreverblog.cn/" class="d-inline-block text-muted" target="_blank" rel="external nofollow"><img src="https://t.eryajf.net/imgs/2022/01/964560013b68c2e4.png" alt="点击查看十年之约" style="width:auto;height:11px;"> | <a rel="nofollow " target="_blank" href="https://beian.miit.gov.cn/">浙ICP备xxx号</a>', // 博客版权信息，支持a标签
     },
 }
