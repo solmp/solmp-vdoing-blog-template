@@ -2,7 +2,7 @@
   "name": "theme-vdoing-blog",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "vuepress dev docs --debug",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh",
     "editFm": "node utils/editFrontmatter.js",
@@ -31,15 +31,20 @@
     "vuepress-plugin-rss-support": "^1.1.1",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.7",
-    "vuepress-theme-vdoing": "^1.11.1",
+    "vuepress-theme-vdoing": "^1.11.3",
     "yamljs": "^0.3.0"
   },
   "dependencies": {
     "busuanzi.pure.js": "^1.0.3",
     "leancloud-storage": "^4.11.1",
-    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-comment-plus": "^1.1.0",
     "vuepress-plugin-reading-progress": "^1.0.10",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
+  },
+  "#": {
+    "说明": "这里作为依赖的备份，无实际用处，可删除",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-comment-plus": "^1.1.0"
   }
 }

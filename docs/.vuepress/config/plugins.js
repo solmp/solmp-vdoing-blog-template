@@ -99,26 +99,45 @@ module.exports = [
         sitemap: "/sitemap.xml",
     },
 
-    // gitalk评论
+    // gitalk评论 - 插件：vuepress-plugin-comment
+    // [
+    //     'vuepress-plugin-comment',
+    //     {
+    //         choosen: 'gitalk',
+    //         options: {
+    //             clientID: '4c78cef35eb185dca419',
+    //             clientSecret: '5e04f838f50e50c764d705f7fa01816a17cdaf39',
+    //             repo: 'solmp.github.io', // GitHub 仓库
+    //             owner: 'solmp', // GitHub仓库所有者
+    //             admin: ['solmp'], // 对仓库有写权限的人
+    //             // distractionFreeMode: true,
+    //             pagerDirection: 'last', // 'first'正序 | 'last'倒序
+    //             id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+    //             title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+    //             labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+    //             body:
+    //                 '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+    //         },
+    //     },
+    // ],
+
+    // waline评论 - 插件：vuepress-plugin-comment-plus
     [
-        'vuepress-plugin-comment',
+        'vuepress-plugin-comment-plus',
         {
-            choosen: 'gitalk',
+            choosen: 'waline',
+            // options选项中的所有参数，会传给Waline的配置
             options: {
-                clientID: '4c78cef35eb185dca419',
-                clientSecret: '5e04f838f50e50c764d705f7fa01816a17cdaf39',
-                repo: 'solmp.github.io', // GitHub 仓库
-                owner: 'solmp', // GitHub仓库所有者
-                admin: ['solmp'], // 对仓库有写权限的人
-                // distractionFreeMode: true,
-                pagerDirection: 'last', // 'first'正序 | 'last'倒序
-                id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-                title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-                labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-                body:
-                    '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-            },
-        },
+                el: '#valine-vuepress-comment',
+                serverURL: 'https://solmp-blog-comment-waline.vercel.app/', //  例如 "https://***.vercel.app/"
+                path: '<%- frontmatter.commentid || frontmatter.permalink %>',
+                emoji: [
+                    'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+                    'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+                ],
+                placeholder: "请留言"
+            }
+        }
     ],
 
     // "上次更新"时间格式
