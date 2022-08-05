@@ -30,6 +30,27 @@ module.exports = [
         }
     ],
 
+    // 音乐插件
+    // 配置文档：https://moefyit.github.io/moefy-vuepress/packages/meting.html
+    [
+        'meting',
+        {
+            meting: {
+                server: 'netease',  // 音乐平台，可选值： "netease" | "tencent" | "kuwo" | "kugou" | "baidu"
+                type: 'playlist',   // 资源类型，可选值： "song" | "album" | "artist" | "playlist"
+                mid: '7574437002',  // 资源 ID
+            },
+            // 不配置该项的话不会出现全局播放器
+            aplayer: {
+                autoplay: false,        // 是否自动播放
+                order: 'list',            // 设置播放器的初始顺序模式，可选值： 'list' | 'random'
+                lrcType: 3,             // 设置 lrc 歌词解析模式，可选值： 3 | 1 | 0（0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
+                preload: 'metadata',    // 设置音频的预加载模式，可选值：'none' | 'metadata' | 'auto'
+            },
+            defaultCover: 'img/LB-img.jpg',
+        },
+    ],
+
     // 网页头动态变化
     [
         'vuepress-plugin-dynamic-title',
