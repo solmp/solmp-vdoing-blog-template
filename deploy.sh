@@ -7,7 +7,7 @@ set -e
 commit_info=$(git describe --all --always --long)
 dist_path=docs/.vuepress/dist # 打包生成的文件夹路径
 push_branch=gh-pages          # 推送的分支
-repo_name='solmp.github.io'
+repo_name='solmp-vdoing-blog-template'
 
 # 生成静态文件
 npm run build

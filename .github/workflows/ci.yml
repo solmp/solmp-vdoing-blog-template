@@ -37,17 +37,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # token私密变量
         run: npm install && npm run deploy
 
-      # step3-A-2: 部署到服务器 - ✔测试通过
-      # 利用action把build好的文件上传到服务器 /home/www/solmp.github.io 路径下,需要确认此目录已在服务端创建
-      - name: deploy to server
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
-        with:
-          username: ${{ env.SERVER_SSH_USERNAME }}   #ssh user name
-          port: '22' # 远程服务器ssh端口，默认22
-          server: ${{ env.SERVER_IP }} # 远程服务器IP
-          ssh_private_key: ${{ env.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
-          local_path: 'docs/.vuepress/dist/*'  # 对应我们项目打包后的静态文件路径
-          remote_path: ${{ env.SERVER_SITE_PATH }} # 服务器上的路径
+#      # step3-A-2: 部署到服务器 - ✔测试通过
+#      # 利用action把build好的文件上传到服务器 /home/www/solmp.github.io 路径下,需要确认此目录已在服务端创建
+#      - name: deploy to server
+#        uses: wlixcc/SFTP-Deploy-Action@v1.0
+#        with:
+#          username: ${{ env.SERVER_SSH_USERNAME }}   #ssh user name
+#          port: '22' # 远程服务器ssh端口，默认22
+#          server: ${{ env.SERVER_IP }} # 远程服务器IP
+#          ssh_private_key: ${{ env.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
+#          local_path: 'docs/.vuepress/dist/*'  # 对应我们项目打包后的静态文件路径
+#          remote_path: ${{ env.SERVER_SITE_PATH }} # 服务器上的路径
 
 
 #      # step3-B：仅部署到github page（不推送到其它平台）- ✔测试通过
