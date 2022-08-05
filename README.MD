@@ -3,12 +3,12 @@
 
 [![](https://visitor-badge.laobi.icu/badge?page_id=solmp.solmp)](https://visitor-badge.laobi.icu/badge?page_id=solmp.solmp)
 [![Mail Badge](https://img.shields.io/badge/-solmp163@163.com-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:solmp163@163.com)](mailto:solmp163@163.com)
-[![](https://img.shields.io/badge/博客模板-solmp-red?logo=Blogger)](https://solmp-vdoing-blog-template.vercel.app/)
-[![wiki](https://img.shields.io/website?url=https://solmp-vdoing-blog-template.vercel.app/)](https://solmp-vdoing-blog-template.vercel.app/)
+[![](https://img.shields.io/badge/博客模板-solmp-red?logo=Blogger)](https://solmp-blog-template.vercel.app/)
+[![wiki](https://img.shields.io/website?url=https://solmp-blog-template.vercel.app/)](https://solmp-blog-template.vercel.app/)
 
 **博客地址：** [https://solmp.vercel.app/](https://solmp.vercel.app/)
 
-**博客模板预览：** [https://solmp-vdoing-blog-template.vercel.app/](https://solmp-vdoing-blog-template.vercel.app/)
+**博客模板预览：** [https://solmp-blog-template.vercel.app/](https://solmp-blog-template.vercel.app/)
 
 **博客模板仓库：** [https://github.com/solmp/solmp-vdoing-blog-template](https://github.com/solmp/solmp-vdoing-blog-template)
 
@@ -40,7 +40,7 @@
 - updateTheme配置
 
 
-# 博客模板 v1.0-template
+# 博客模板 v1.0-template pre
 
 ## 版本信息
 
