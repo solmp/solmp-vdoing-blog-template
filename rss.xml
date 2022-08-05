@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SolのWorld</title>
+        <link>https://solmp-vdoing-blog-template.vercel.app</link>
+        <description>观察、思考、学习、构建知识体系</description>
+        <lastBuildDate>Fri, 05 Aug 2022 18:27:36 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <atom:link href="https://solmp-vdoing-blog-template.vercel.app/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[随笔 - 置顶1]]></title>
+            <link>https://solmp-vdoing-blog-template.vercel.app/pages/test-82d5e3/</link>
+            <guid>https://solmp-vdoing-blog-template.vercel.app/pages/test-82d5e3/</guid>
+            <pubDate>Wed, 03 Aug 2022 20:52:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[随笔 - 置顶2]]></title>
+            <link>https://solmp-vdoing-blog-template.vercel.app/pages/test-bd28bb/</link>
+            <guid>https://solmp-vdoing-blog-template.vercel.app/pages/test-bd28bb/</guid>
+            <pubDate>Wed, 03 Aug 2022 20:52:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[随笔 - 非置顶]]></title>
+            <link>https://solmp-vdoing-blog-template.vercel.app/pages/test-32cea2/</link>
+            <guid>https://solmp-vdoing-blog-template.vercel.app/pages/test-32cea2/</guid>
+            <pubDate>Wed, 03 Aug 2022 20:52:14 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

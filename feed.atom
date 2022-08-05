@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://solmp-vdoing-blog-template.vercel.app</id>
+    <title>SolのWorld</title>
+    <updated>2022-08-05T18:27:36.040Z</updated>
+    <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+    <link rel="alternate" href="https://solmp-vdoing-blog-template.vercel.app"/>
+    <link rel="self" href="https://solmp-vdoing-blog-template.vercel.app/feed.atom"/>
+    <subtitle>观察、思考、学习、构建知识体系</subtitle>
+    <entry>
+        <title type="html"><![CDATA[随笔 - 置顶1]]></title>
+        <id>https://solmp-vdoing-blog-template.vercel.app/pages/test-82d5e3/</id>
+        <link href="https://solmp-vdoing-blog-template.vercel.app/pages/test-82d5e3/">
+        </link>
+        <updated>2022-08-03T20:52:20.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[随笔 - 置顶2]]></title>
+        <id>https://solmp-vdoing-blog-template.vercel.app/pages/test-bd28bb/</id>
+        <link href="https://solmp-vdoing-blog-template.vercel.app/pages/test-bd28bb/">
+        </link>
+        <updated>2022-08-03T20:52:24.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[随笔 - 非置顶]]></title>
+        <id>https://solmp-vdoing-blog-template.vercel.app/pages/test-32cea2/</id>
+        <link href="https://solmp-vdoing-blog-template.vercel.app/pages/test-32cea2/">
+        </link>
+        <updated>2022-08-03T20:52:14.000Z</updated>
+    </entry>
+</feed>
