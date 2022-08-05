@@ -34,12 +34,12 @@
 ### 变化内容
 
 - 增加音乐插件 - meting
-- 更新vuepress版本到^1.9.7
+- 更新vuepress版本到1.9.7
 - 通过editorconfig进行格式化
 - 锁定版本
-  - "vue": "^2.6.14"
-  - "vue-server-renderer": "^2.6.14"
-  - "vue-template-compiler": "^2.6.14"
+  - "vue": "2.6.14"
+  - "vue-server-renderer": "2.6.14"
+  - "vue-template-compiler": "2.6.14"
 
 ### 修复错误
 
