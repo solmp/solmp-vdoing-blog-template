@@ -57,7 +57,7 @@ module.exports = [
         },
     ],
 
-    // 代码块儿演示
+    // 代码块演示
     [
         'demo-block',
         {
@@ -154,7 +154,7 @@ module.exports = [
     [
         '@vuepress/last-updated',
         {
-            transformer: (timestamp, lang) => {
+            transformer: (timestamp) => {
                 const dayjs = require('dayjs') // https://day.js.org/
                 return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
             },
