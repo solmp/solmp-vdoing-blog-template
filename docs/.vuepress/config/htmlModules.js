@@ -1,4 +1,4 @@
-
+// 额外页面模块
 module.exports = {
     // windowLB:
     // `<img src="/img/LB-img.jpg" class="LB-img"

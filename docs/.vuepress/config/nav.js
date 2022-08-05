@@ -21,7 +21,7 @@ module.exports = [
         ]
     },
     {
-        text: '编程', link: '/test-code/',
+        text: '技术', link: '/test-tech/',
         items: [
             {text: '收集箱', link: '/pages/test-169d48/'},
         ]
@@ -42,6 +42,7 @@ module.exports = [
             {
                 items: [
                     {text: '友链', link: '/test-friends/'},
+                    {text: '音乐', link: '/test-music/'},
                     {text: '导航', link: '/test-nav/'},
                     {text: '收藏夹', link: '/test-favorites/'},
                 ]
@@ -60,10 +61,10 @@ module.exports = [
             },
             {
                 items: [
-                    {text: 'web请求信息查看', link: 'http://httpbin.org/get'},
+                    {text: 'vdoing主题文档', link: 'https://doc.xugaoyi.com/'},
+                    {text: 'web请求信息查看', link: 'https://httpbin.org/get'},
                     {text: '百度统计', link: 'https://tongji.baidu.com/'},
                     {text: '百度推送链接', link: 'https://ziyuan.baidu.com/linksubmit/index'},
-                    {text: 'vuepress-theme-vdoing', link: 'https://doc.xugaoyi.com/'},
                 ]
             }
         ],

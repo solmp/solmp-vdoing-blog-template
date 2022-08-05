@@ -1,4 +1,5 @@
 **Sol**
+- 个人博客模板源代码仓库
 
 [![](https://visitor-badge.laobi.icu/badge?page_id=solmp.solmp)](https://visitor-badge.laobi.icu/badge?page_id=solmp.solmp)
 [![Mail Badge](https://img.shields.io/badge/-solmp163@163.com-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:solmp163@163.com)](mailto:solmp163@163.com)
@@ -18,6 +19,26 @@
 
 ## 文章页
 ![文章页](docs/.vuepress/public/img/post-page.png)
+
+# 博客模板 v1.1-template
+
+## 版本信息
+
+- 发布版本：v1.1
+- 主题版本：[vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing) - v1.12.7
+- 发布时间：2022-08-05
+
+### 变化内容
+- 增加音乐插件 - meting
+- 更新vuepress版本到^1.9.7
+- 锁定版本
+  - "vue": "^2.6.14"
+  - "vue-server-renderer": "^2.6.14"
+  - "vue-template-compiler": "^2.6.14"
+
+### 修复错误
+- updateTheme配置
+
 
 # 博客模板 v1.0-template
 
