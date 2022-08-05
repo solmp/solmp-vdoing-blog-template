@@ -9,11 +9,11 @@ on:
 env: # 设置环境变量
   TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
 
-  # 部署到服务器相关配置
-  SERVER_IP: 8.142.217.82 # 远程服务器IP
-  SERVER_SSH_USERNAME: root # 远程服务器ssh 用户名
-  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
-  SERVER_SITE_PATH: /home/www/solmp.github.io/ # 服务器保存路径，需要确认此目录已在服务端创建
+#  # 部署到服务器相关配置
+#  SERVER_IP: 8.142.217.82 # 远程服务器IP
+#  SERVER_SSH_USERNAME: root # 远程服务器ssh 用户名
+#  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # 认证服务器秘钥对的私钥
+#  SERVER_SITE_PATH: /home/www/solmp.github.io/ # 服务器保存路径，需要确认此目录已在服务端创建
 
 jobs:
   build: # 自定义名称

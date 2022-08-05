@@ -2,31 +2,31 @@
 module.exports = [
     {text: '首页', link: '/'},
     {
-        text: '工具库', link: '/tool/',
+        text: '工具库', link: '/test-tool/',
         items: [
-            {text: '收集箱', link: '/pages/17dd2e/'},
-            {text: 'Other', link: '/pages/36e830/'},
+            {text: '收集箱', link: '/pages/test-17dd2e/'},
+            {text: 'Other', link: '/pages/test-36e830/'},
         ]
     },
     {
-        text: '专题', link: '/topic/',
+        text: '专题', link: '/test-topic/',
         items: [
-            {text: '收集箱', link: '/pages/153338/'},
+            {text: '收集箱', link: '/pages/test-153338/'},
         ]
     },
     {
-        text: '思考', link: '/thinking/',
+        text: '思考', link: '/test-thinking/',
         items: [
-            {text: '收集箱', link: '/pages/f76d5d/'},
+            {text: '收集箱', link: '/pages/test-f76d5d/'},
         ]
     },
     {
-        text: '编程', link: '/code/',
+        text: '编程', link: '/test-code/',
         items: [
-            {text: '收集箱', link: '/pages/169d48/'},
+            {text: '收集箱', link: '/pages/test-169d48/'},
         ]
     },
-    {text: '关于', link: '/about/'},
+    {text: '关于', link: '/test-about/'},
     {
         text: '索引', link: '/categories/',
         items: [
@@ -37,13 +37,13 @@ module.exports = [
     },
     {
         text: '页面',
-        link: '/friends/',
+        link: '/test-friends/',
         items: [
             {
                 items: [
-                    {text: '友链', link: '/friends/'},
-                    {text: '导航', link: '/nav/'},
-                    {text: '收藏夹', link: '/favorites/'},
+                    {text: '友链', link: '/test-friends/'},
+                    {text: '导航', link: '/test-nav/'},
+                    {text: '收藏夹', link: '/test-favorites/'},
                 ]
             },
             {

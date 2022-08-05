@@ -1,6 +1,6 @@
 // set your global feed options - override in page frontmatter `feed`
 const feed_options = {
-    canonical_base: 'https://solmp.vercel.app',
+    canonical_base: 'https://solmp-vdoing-blog-template.vercel.app',
     count: 5000,
 };
 
@@ -8,7 +8,7 @@ const autometa_options = {
     site: {
         name: 'Sol',
     },
-    canonical_base: 'https://solmp.vercel.app',
+    canonical_base: 'https://solmp-vdoing-blog-template.vercel.app',
 };
 
 // 插件配置
@@ -96,14 +96,14 @@ module.exports = [
     'vuepress-plugin-mermaidjs',
     [
         'sitemap', {
-        hostname: 'https://solmp.vercel.app',
+        hostname: 'https://solmp-vdoing-blog-template.vercel.app',
         exclude: ["/404.html"],
     },
     ],
 
     // 站点地图
     'robots', {
-        host: "https://solmp.vercel.app",
+        host: "https://solmp-vdoing-blog-template.vercel.app",
         disallowAll: false,
         allowAll: true,
         sitemap: "/sitemap.xml",
