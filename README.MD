@@ -29,12 +29,13 @@
 
 - 发布版本：v1.1
 - 主题版本：[vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing) - v1.12.7
-- 发布时间：2022-08-05
+- 发布时间：2022-08-06
 
 ### 变化内容
 
 - 增加音乐插件 - meting
 - 更新vuepress版本到^1.9.7
+- 通过editorconfig进行格式化
 - 锁定版本
   - "vue": "^2.6.14"
   - "vue-server-renderer": "^2.6.14"
@@ -43,6 +44,7 @@
 ### 修复错误
 
 - updateTheme配置
+- 部分页面跳转错误
 
 # 博客模板 v1.0-template pre
 
