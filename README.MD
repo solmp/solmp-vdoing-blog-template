@@ -1,4 +1,5 @@
 **Sol**
+
 - 个人博客模板源代码仓库
 
 [![](https://visitor-badge.laobi.icu/badge?page_id=solmp.solmp)](https://visitor-badge.laobi.icu/badge?page_id=solmp.solmp)
@@ -15,9 +16,11 @@
 # 页面展示
 
 ## 首页
+
 ![首页](docs/.vuepress/public/img/main-page.png)
 
 ## 文章页
+
 ![文章页](docs/.vuepress/public/img/post-page.png)
 
 # 博客模板 v1.1-template
@@ -29,6 +32,7 @@
 - 发布时间：2022-08-05
 
 ### 变化内容
+
 - 增加音乐插件 - meting
 - 更新vuepress版本到^1.9.7
 - 锁定版本
@@ -37,8 +41,8 @@
   - "vue-template-compiler": "^2.6.14"
 
 ### 修复错误
-- updateTheme配置
 
+- updateTheme配置
 
 # 博客模板 v1.0-template pre
 
