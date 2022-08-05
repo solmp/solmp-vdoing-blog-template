@@ -1,6 +1,6 @@
 ---
 tagsPage: true
 title: 标签
-permalink: /tags/
+permalink: /test-tags/
 article: false
 ---

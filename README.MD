@@ -7,7 +7,7 @@
 
 **博客地址：** [https://solmp.vercel.app/](https://solmp.vercel.app/)
 
-**博客模板预览地址：** [https://solmp-vdoing-blog-template.vercel.app/](https://solmp-vdoing-blog-template.vercel.app/)
+**博客模板预览：** [https://solmp-vdoing-blog-template.vercel.app/](https://solmp-vdoing-blog-template.vercel.app/)
 
 **博客模板仓库：** [https://github.com/solmp/solmp-vdoing-blog-template](https://github.com/solmp/solmp-vdoing-blog-template)
 

@@ -1,6 +1,6 @@
 ---
 archivesPage: true
 title: 归档
-permalink: /archives/
+permalink: /test-archives/
 article: false
 ---

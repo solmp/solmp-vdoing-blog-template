@@ -28,11 +28,11 @@ module.exports = [
     },
     {text: '关于', link: '/test-about/'},
     {
-        text: '索引', link: '/categories/',
+        text: '索引', link: '/test-categories/',
         items: [
-            {text: '分类', link: '/categories/'},
-            {text: '标签', link: '/tags/'},
-            {text: '归档', link: '/archives/'},
+            {text: '分类', link: '/test-categories/'},
+            {text: '标签', link: '/test-tags/'},
+            {text: '归档', link: '/test-archives/'},
         ],
     },
     {
@@ -48,8 +48,14 @@ module.exports = [
             },
             {
                 items: [
+                    {text: 'Sol - Github', link: 'https://github.com/solmp'},
+                    {text: 'Sol - blog', link: 'https://solmp.vercel.app/'},
+                    {text: 'solmp-vdoing-blog-template', link: 'https://github.com/solmp/solmp-vdoing-blog-template'},
+                ]
+            },
+            {
+                items: [
                     {text: '圈猫猫', link: 'https://ganlvtech.github.io/phaser-catch-the-cat/'},
-
                 ]
             },
             {

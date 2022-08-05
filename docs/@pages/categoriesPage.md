@@ -1,6 +1,6 @@
 ---
 categoriesPage: true
 title: 分类
-permalink: /categories/
+permalink: /test-categories/
 article: false
 ---
