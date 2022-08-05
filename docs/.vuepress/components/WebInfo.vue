@@ -3,8 +3,8 @@
   <div class="web-info card-box">
     <div class="webinfo-title">
       <i
-          class="iconfont icon-award"
-          style="font-size: 0.875rem; font-weight: 900; width: 1.25em"
+        class="iconfont icon-award"
+        style="font-size: 0.875rem; font-weight: 900; width: 1.25em"
       ></i>
       <span>站点信息</span>
     </div>
@@ -98,8 +98,8 @@ export default {
             archivesWords += itemFile.wordsCount;
           } else {
             let wordsCount = itemFile.wordsCount.slice(
-                0,
-                itemFile.wordsCount.length - 1
+              0,
+              itemFile.wordsCount.length - 1
             );
             archivesWords += wordsCount * 1000;
           }
@@ -108,7 +108,7 @@ export default {
       } else if (totalWords == "archives") {
         this.totalWords = 0;
         console.log(
-            "如果 totalWords = 'archives'，必须传入 eachFileWords，显然您并没有传入！"
+          "如果 totalWords = 'archives'，必须传入 eachFileWords，显然您并没有传入！"
         );
       } else {
         this.totalWords = totalWords;
@@ -134,8 +134,8 @@ export default {
         if (tagsWrapper && webInfo) {
           if (!this.isSiblilngNode(tagsWrapper, webInfo)) {
             tagsWrapper.parentNode.insertBefore(
-                webInfo,
-                tagsWrapper.nextSibling
+              webInfo,
+              tagsWrapper.nextSibling
             );
             clearInterval(interval);
           }
@@ -165,18 +165,18 @@ export default {
         let indexUv = document.querySelector(".web-site-pv");
         let indexPv = document.querySelector(".web-site-uv");
         if (
-            indexPv &&
-            indexUv &&
-            indexPv.innerText == "" &&
-            indexUv.innerText == ""
+          indexPv &&
+          indexUv &&
+          indexPv.innerText == "" &&
+          indexUv.innerText == ""
         ) {
           let interval = setInterval(() => {
             // 再次判断原因：防止进入 setInterval 的瞬间，访问量获取成功
             if (
-                indexPv &&
-                indexUv &&
-                indexPv.innerText == "" &&
-                indexUv.innerText == ""
+              indexPv &&
+              indexUv &&
+              indexPv.innerText == "" &&
+              indexUv.innerText == ""
             ) {
               i += iterationTime;
               if (i > iterationTime * 5) {

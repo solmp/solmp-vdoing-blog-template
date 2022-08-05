@@ -30,8 +30,8 @@ export default {
           let modeHeight = item.offsetHeight;
           // display:none 的代码块需要额外处理，图文卡片列表本质是代码块，所以排除掉
           if (
-              modeHeight == 0 &&
-              item.parentNode.className != "cardImgListContainer"
+            modeHeight == 0 &&
+            item.parentNode.className != "cardImgListContainer"
           ) {
             modeHeight = this.getHiddenElementHight(item);
           }
@@ -81,17 +81,17 @@ export default {
     getHiddenElementHight(hiddenElement) {
       let modeHeight;
       if (
-          hiddenElement.parentNode.style.display == "none" ||
-          hiddenElement.parentNode.className !=
-          "theme-code-block theme-code-block__active"
+        hiddenElement.parentNode.style.display == "none" ||
+        hiddenElement.parentNode.className !=
+        "theme-code-block theme-code-block__active"
       ) {
         hiddenElement.parentNode.style.display = "block";
         modeHeight = hiddenElement.offsetHeight;
         hiddenElement.parentNode.style.display = "none";
         // 清除 vuepress 自带的 deetails 多选代码块
         if (
-            hiddenElement.parentNode.className == "theme-code-block" ||
-            hiddenElement.parentNode.className == "cardListContainer"
+          hiddenElement.parentNode.className == "theme-code-block" ||
+          hiddenElement.parentNode.className == "cardListContainer"
         ) {
           hiddenElement.parentNode.style.display = "";
         }
@@ -109,8 +109,8 @@ export default {
       let copyElement = element.getElementsByClassName("code-copy")[0];
       if (copyElement && copyElement.parentNode != element) {
         copyElement.parentNode.parentNode.insertBefore(
-            copyElement,
-            copyElement.parentNode
+          copyElement,
+          copyElement.parentNode
         );
         return true;
       } else {
@@ -121,13 +121,13 @@ export default {
     getLanguage(element) {
       // 动态获取 before 的 content 属性
       let content = getComputedStyle(element, ":before").getPropertyValue(
-          "content"
+        "content"
       );
       // "" 的长度是 2，不是 0，"x" 的长度是 3
       if (content.length == 2 || content == "" || content == "none") {
         let language = element.className.substring(
-            "language".length + 1,
-            element.className.indexOf(" ")
+          "language".length + 1,
+          element.className.indexOf(" ")
         );
         element.setAttribute("data-language", language);
       }

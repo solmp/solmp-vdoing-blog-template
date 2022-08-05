@@ -14,9 +14,9 @@ export default {
     $route(to, from) {
       // 如果页面是非首页，# 号也会触发路由变化，这里要排除掉
       if (
-          to.path !== "/" &&
-          to.path !== from.path &&
-          this.$themeConfig.blogInfo
+        to.path !== "/" &&
+        to.path !== from.path &&
+        this.$themeConfig.blogInfo
       ) {
         this.initPageInfo();
       }
@@ -30,7 +30,7 @@ export default {
       if (this.$frontmatter.article == undefined || this.$frontmatter.article) {
         // 排除掉 article 为 false 的文章
         const {eachFileWords, pageView, pageIteration, readingTime} =
-            this.$themeConfig.blogInfo;
+          this.$themeConfig.blogInfo;
         // 下面两个 if 可以调换位置，从而让文章的浏览量和字数交换位置
         if (eachFileWords) {
           try {
@@ -99,7 +99,7 @@ export default {
       let pageView = document.querySelector(".page-view");
       if (pageView) {
         pageView.innerHTML =
-            '<a style="color: #888; margin-left: 3px" href="javascript:;" id="busuanzi_value_page_pv" class="view-data"><i title="正在获取..." class="loading iconfont icon-loading"></i></a>';
+          '<a style="color: #888; margin-left: 3px" href="javascript:;" id="busuanzi_value_page_pv" class="view-data"><i title="正在获取..." class="loading iconfont icon-loading"></i></a>';
       } else {
         // 创建访问量的元素
         let template = document.createElement("div");
@@ -109,7 +109,7 @@ export default {
         template.style.marginLeft = "20px";
         template.style.fontSize = "0.8rem";
         template.innerHTML =
-            '<a style="color: #888; margin-left: 3px" href="javascript:;" id="busuanzi_value_page_pv" class="view-data"><i title="正在获取..." class="loading iconfont icon-loading"></i></a>';
+          '<a style="color: #888; margin-left: 3px" href="javascript:;" id="busuanzi_value_page_pv" class="view-data"><i title="正在获取..." class="loading iconfont icon-loading"></i></a>';
         // 添加 loading 效果
         let style = document.createElement("style");
         style.innerHTML = `@keyframes turn {
@@ -170,9 +170,9 @@ export default {
      * 挂载目标到页面上
      */
     mountedView(
-        template,
-        mountedIntervalTime = 100,
-        moutedParentEvent = ".articleInfo-wrap > .articleInfo > .info"
+      template,
+      mountedIntervalTime = 100,
+      moutedParentEvent = ".articleInfo-wrap > .articleInfo > .info"
     ) {
       let i = 0;
       let parentElement = document.querySelector(moutedParentEvent);

@@ -1,10 +1,10 @@
 // 额外页面模块
 module.exports = {
-    // windowLB:
-    // `<img src="/img/LB-img.jpg" class="LB-img"
-    //       style="width: 130px;height: 130px;opacity: 0.8;
-    //       margin-bottom: -4px;padding-bottom:0;position: fixed;
-    //       bottom: 0;left: 0.5rem;z-index: 1;" alt="">`
+  // windowLB:
+  // `<img src="/img/LB-img.jpg" class="LB-img"
+  //       style="width: 130px;height: 130px;opacity: 0.8;
+  //       margin-bottom: -4px;padding-bottom:0;position: fixed;
+  //       bottom: 0;left: 0.5rem;z-index: 1;" alt="">`
 }
 
 // 官方文档：https://doc.xugaoyi.com/pages/a20ce8/#%E8%87%AA%E5%AE%9A%E4%B9%89html%E6%A8%A1%E5%9D%97
